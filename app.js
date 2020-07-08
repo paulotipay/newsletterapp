@@ -35,7 +35,7 @@ app.post("/", function (req, res) {
     var jsonData = JSON.stringify(data);
 
     var options = {
-        url: "https://us10.api.mailchimp.com/3.0/lists/6504fdead5",
+        //url: "https://us10.api.mailchimp.com/3.0/lists/6504fdead5",
         method: "POST",
         headers: {
             "Authorization": "paulo1 4d008fe94cc3ac1f5bac1970492c20a0-us10"
@@ -57,11 +57,7 @@ app.post("/", function (req, res) {
     */
 
 
-    axios.get("https://us10.api.mailchimp.com/3.0/lists/6504fdead5", {
-            headers: {
-                "Authorization": "paulo1 4d008fe94cc3ac1f5bac1970492c20a0-us10"
-            }
-        })
+    axios.get("https://us10.api.mailchimp.com/3.0/lists/6504fdead5", options)
         .then(response => {
             console.log("Axios " + response.status);
             //res.send(response.data.status);
